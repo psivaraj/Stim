@@ -418,7 +418,7 @@ void ErrorAnalyzer::check_for_gauge(
         has_observables |= t.is_observable_id();
         has_detectors |= t.is_relative_detector_id();
     }
-    if (allow_gauge_detectors && !has_observables) {
+    if (allow_gauge_detectors) {
         remove_gauge(add_error(0.5, potential_gauge.range()));
         return;
     }
